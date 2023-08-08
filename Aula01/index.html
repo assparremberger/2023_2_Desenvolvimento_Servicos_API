@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSAPI - Aula01</title>
+</head>
+<body>
+
+    <div id="minhaDiv">
+        <i>Oi</i>
+    </div>
+    <script>
+
+        // document.getElementById("minhaDiv").innerHTML += " galerinha <hr>";
+
+        var mDiv = document.getElementById("minhaDiv");
+        var conteudo = mDiv.innerHTML;
+        conteudo = conteudo + " galerinha <hr>";
+        mDiv.innerHTML = conteudo;
+
+        document.write("Bom dia <b>pessoal</b>!");
+        console.log("Este é um log no console");
+    //    window.alert("Aula01 de DSAPI");
+        alert("Aula01 de DSAPI");
+    </script>
+
+
+</body>
+</html>
