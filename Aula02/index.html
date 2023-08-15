@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula02</title>
+</head>
+<body>
+
+    <input type="text" id="txtNome" />
+    <button onclick="adicionar()">Adicionar</button>
+
+    <div id="divJogadores"></div>
+
+    <script>
+        function adicionar(){
+            nome = document.getElementById("txtNome").value;
+            if( nome == "" ){
+                alert("O campo nome deve ser preenchido!");
+            }else{
+                divJogadores = document.getElementById("divJogadores");
+                conteudo = divJogadores.innerHTML;
+                conteudo += nome + "<br>";
+                divJogadores.innerHTML = conteudo
+            }
+        }
+    </script>
+
+
+<hr>
+<h1>Aula02</h1>
+
+<form id="meuForm" action="salvar.php" method="POST"
+        onsubmit="return validar()" >
+        <input type="text" name="txtValor" id="txtValor" />
+        <input type="submit" value="Enviar" />
+</form>
+<p id="info"></p>
+
+<script src="script.js"></script>
+
+    
+</body>
+</html>
