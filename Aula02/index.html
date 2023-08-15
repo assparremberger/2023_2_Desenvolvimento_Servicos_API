@@ -36,56 +36,6 @@
     </form>
     <p id="info"></p>
     <script src="script.js"></script>
-     
-    <hr>
-
-    <h1>Aula03</h1>
-    #crie dois campos para inserir valores inteiros  
-    <form id="meuForm" action="salvar.php" method="post"
-        onsubmit="return validar()">
-        <input type="text" name="txtValor1" id="txtValor1"/>
-        <input type="text" name="txtValor2" id="txtValor2"/>
-        #crie um botão para escolha das quatro operaçoes em forma de itens.
-        <input type="radio" name="operacao" value="soma" checked/>Soma
-        <input type="radio" name="operacao" value="subtracao"/>Subtração
-        <input type="radio" name="operacao" value="multiplicacao"/>Multiplicação
-        <input type="radio" name="operacao" value="divisao"/>Divisão
-
-
-        #crie a rotina para verifiar qual calculo deve ser executado com if e else e realize o calculo com os valores txtValor1 e txtValor2 de acordo com o escolhido e 
-        <script>
-            function validar(){
-                var txtValor1 = document.getElementById("txtValor1").value;
-                var txtValor2 = document.getElementById("txtValor2").value;
-                var operacao = document.getElementById("operacao").value;
-
-                if (txtValor1 == "" || txtValor2 == ""){
-                    alert("O campo valor de ser preenchido");
-                r   eturn false;
-                }else{
-                    return true;
-                }
-            }
-
-            if (operacao == "soma"){
-                var resultado = parseInt(txtValor1) + parseInt(txtValor2);
-            }else if (operacao == "subtracao"){
-                var resultado = parseInt(txtValor1) - parseInt(txtValor2);
-            }else if (operacao == "multiplicacao"){
-                var resultado = parseInt(txtValor1) * parseInt(txtValor2);
-            }else if (operacao == "divisao"){
-                var resultado = parseInt(txtValor1) / parseInt(txtValor2);
-            }
-        </script>
-
-        <input type="submit" value="Enviar"/>
-
-        <input type="text" name="txtResultado" id="txtResultado" value="resultado" readonly/>
-        
-        <br>
-    </form>
-    <p id="info"></p>
-    <script src="script.js"></script>
     <hr>
 
 </body>
