@@ -36,10 +36,11 @@
     </form>
     <p id="info"></p>
     <script src="script.js"></script>
-    #crie dois campos para inserir valores inteiros e   
+     
     <hr>
 
     <h1>Aula03</h1>
+    #crie dois campos para inserir valores inteiros  
     <form id="meuForm" action="salvar.php" method="post"
         onsubmit="return validar()">
         <input type="text" name="txtValor1" id="txtValor1"/>
@@ -52,7 +53,7 @@
         <input type="radio" name="operacao" value="divisao"/>Divisão
         <br>
 
-        #crie a rotina para verifiar qual calculo deve ser executado com if e else e realize o calculo com os valores txtValor1 e txtValor2 de acordo com o escolhido pelo usuário e apresente o resultado
+        #crie a rotina para verifiar qual calculo deve ser executado com if e else e realize o calculo com os valores txtValor1 e txtValor2 de acordo com o escolhido e 
         
         if (operacao == "soma"){
             var resultado = parseInt(txtValor1) + parseInt(txtValor2);
@@ -63,11 +64,13 @@
         }else if (operacao == "divisao"){
             var resultado = parseInt(txtValor1) / parseInt(txtValor2);
         }
-        
-        <br>
+       
 
         <input type="submit" value="Enviar"/>
-
+        
+        <input type="text" name="txtResultado" id="txtResultado" value="resultado" readonly/>
+        
+        <br>
     </form>
     <p id="info"></p>
     <script src="script.js"></script>
