@@ -11,7 +11,6 @@ function validar(){
         return false;
     } else {
         pInfo.innerHTML = "Valor válido";
-        pInfo.style.color = "green";
         pInfo.setAttributeNS("background", "white", "color", "green");
         return true;        
     }
