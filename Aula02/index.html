@@ -45,19 +45,28 @@
         <input type="text" name="txtValor1" id="txtValor1"/>
         <input type="text" name="txtValor2" id="txtValor2"/>
 
-    #crie um botão para escolha das quatro operaçoes em forma de itens.
-    <input type="radio" name="operacao" value="soma" checked/>Soma
-    <input type="radio" name="operacao" value="subtracao"/>Subtração
-    <input type="radio" name="operacao" value="multiplicacao"/>Multiplicação
-    <input type="radio" name="operacao" value="divisao"/>Divisão
-    <br>
-    <br>
+        #crie um botão para escolha das quatro operaçoes em forma de itens.
+        <input type="radio" name="operacao" value="soma" checked/>Soma
+        <input type="radio" name="operacao" value="subtracao"/>Subtração
+        <input type="radio" name="operacao" value="multiplicacao"/>Multiplicação
+        <input type="radio" name="operacao" value="divisao"/>Divisão
+        <br>
 
+        #crie a rotina para verifiar qual calculo deve ser executado com if e else e realize o calculo com os valores txtValor1 e txtValor2 de acordo com o escolhido pelo usuário e apresente o resultado
+        
+        if (operacao == "soma"){
+            var resultado = parseInt(txtValor1) + parseInt(txtValor2);
+        }else if (operacao == "subtracao"){
+            var resultado = parseInt(txtValor1) - parseInt(txtValor2);
+        }else if (operacao == "multiplicacao"){
+            var resultado = parseInt(txtValor1) * parseInt(txtValor2);
+        }else if (operacao == "divisao"){
+            var resultado = parseInt(txtValor1) / parseInt(txtValor2);
+        }
+        
+        <br>
 
         <input type="submit" value="Enviar"/>
-    #crie a rotina de calculo com os dois valores txtValor1 e txtValor2 e apresente o resultado. 
-                  
-
 
     </form>
     <p id="info"></p>
