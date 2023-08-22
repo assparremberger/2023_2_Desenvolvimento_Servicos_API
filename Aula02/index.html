@@ -29,17 +29,26 @@
 
 
 <hr>
-<h1>Aula02</h1>
+    <h1>Aula02</h1>
 
-<form id="meuForm" action="salvar.php" method="POST"
-        onsubmit="return validar()" >
-        <input type="text" name="txtValor" id="txtValor" />
-        <input type="submit" value="Enviar" />
-</form>
-<p id="info"></p>
+    <form id="meuForm" action="salvar.php" method="POST"
+            onsubmit="return validar()" >
+            <input type="text" name="txtValor" id="txtValor" />
+            <input type="submit" value="Enviar" />
+    </form>
+    <p id="info"></p>
 
-<script src="script.js"></script>
+    <hr>
 
-    
+    <input type="number" id="txtValor01" /> <br>
+    <input type="number" id="txtValor02" /> <br>
+    <button onclick="calcular()">Calcular</button> <br>
+    <p id="pResult"></p>
+
+
+
+
+
+    <script src="script.js"></script>    
 </body>
 </html>
