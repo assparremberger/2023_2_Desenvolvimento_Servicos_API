@@ -1,21 +1,17 @@
-function calcular(){
-    valor01 = document.getElementById("txtvalor01").value;
-    valor02 = document.getElementById("txtvalor02").value;
+$(document).ready(function(){
+        $("#minhaDiv").css("width", "200px");
+        $("#minhaDiv").css("height", "300px");
+        $("#minhaDiv").css("background-color", "#f0f");
+        $("#minhaDiv").css("color", "white");
+        $("#minhaDiv").html("<i>Olá<i>");
 
-    if( valor01 != "" && valor02.length > 0){
-            v1 = parseFloat(valor01)
-            v2 = parseFloat(valor02)
-            var numero = { 
-                n1 : v1 , 
-                n2 : v2 ,
-                somar : function(){
-                    return this.n1 + this.n2;
-                },
-                subtrair : function(){
-                    return this.n1 - this.n2;
-                }
-            };
-            document.getElementById("pResult").innertHTML = 
-            "Soma: " + numero.somar() + "<br>SUbtração: " + numnero.subtrair
     }
-}
+);
+
+$(fuction(){
+    $("#btnAlterar").click(function(){
+        $("#minhaDiv").hide(3000, function(){
+            $("#minhaDibv").show(1000);
+        });
+    })   
+});
