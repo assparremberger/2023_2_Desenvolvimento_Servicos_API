@@ -9,7 +9,7 @@
 <body>
   
     <h1>Aula03</h1>
-    <form id="meuForm" action="salvar.php" method="post"
+    <form id="meuForm"
         onsubmit="return validar()">
         <input type="text" name="txtValor1" id="txtValor1"/>
         <input type="text" name="txtValor2" id="txtValor2"/>
@@ -20,9 +20,9 @@
             <option value="divisao">Divisão</option>
         </select>
         
-        <input type="submit" value="Enviar"/>
-        <input type="text" name="txtResultado" id="txtResultado" value="resultado" readonly/>
-        
+        <button onclick="validar()">Enviar</button>
+<!--        <input type="text" name="txtResultado" id="txtResultado" value = resultado readonly/> --> 
+        <p id="paragrafo">""</p>
         <script>
             function validar(){
                 var txtValor1 = document.getElementById("txtValor1").value;
@@ -36,7 +36,7 @@
                     return true;
                 }
             }
-            if operacao == "soma"{
+            if (operacao == "soma"){
                 var resultado = parseInt(txtValor1) + parseInt(txtValor2);
             }else if (operacao == "subtracao"){
                 var resultado = parseInt(txtValor1) - parseInt(txtValor2);
@@ -45,8 +45,10 @@
             }else if (operacao == "divisao"){
                 var resultado = parseInt(txtValor1) / parseInt(txtValor2);
             }
-        </script>
+            print( "test" );
 
+            document.getElementById("paragrafo").innerHTML=resultado;
+        </script>
         
 
 
