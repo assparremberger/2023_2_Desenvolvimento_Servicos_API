@@ -1,0 +1,16 @@
+{
+    "nome" : "Maria" ,
+    "idade" : 35 ,
+    "altura" : 1.75 ,
+    "casado" : true ,
+    "telefone" : [
+        "(51) 98765-4321" ,
+        "(51) 3344-5566"
+    ],
+    "filhos" : [
+        { "nome" : "Pedro" , "idade" : 10 } ,
+        { "nome" : "Júlia" , "idade" : 14 } 
+    ],
+    "conjuge" : { "nome" : "José" , "idade" : 35 } ,
+    "endereco" : null 
+}
