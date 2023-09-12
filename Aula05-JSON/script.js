@@ -47,6 +47,28 @@ function buscarProdutos(){
             }
         }
     };
-    xhttp.open("GET", "servidor.php", true);
+    xhttp.open("GET", "servidor.php?buscar", true);
     xhttp.send();
+}
+
+function inserirProduto(){
+    xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function(){
+        if( this.readyState == 4 && this.status == 200){
+            objJSON = JSON.parse( this.responseText );
+            if( objJSON.id ){
+                alert("Produto inserido: " + objJSON.id );
+            }else{
+                alert( objJSON.resposta );
+            }
+           
+        }
+    };
+
+    xhttp.open("POST", "servidor.php?inserir", true);
+    xhttp.setRequestHeader("Content-type" ,"application/x-www-form-urlencoded");
+    nome = document.getElementById("txtNome").value;
+    preco = document.getElementById("txtPreco").value;
+    xhttp.send( "nome=" + nome + "&preco=" + preco );
 }
