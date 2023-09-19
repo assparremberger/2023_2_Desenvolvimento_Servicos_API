@@ -46,4 +46,25 @@
 
     }
 
+
+    if( isset( $_REQUEST["excluir"] ) ){
+
+        try {
+            $conn = mysqli_connect("localhost", "root", "", "loja_2023_2");
+            if( $conn ){
+                $idProd = $_POST["id"];
+                $sql = "DELETE FROM produtos WHERE id = $idProd " ;
+                mysqli_query($conn, $sql);
+               
+                mysqli_close($conn);
+                echo '{ "resposta" : "Produto excluído com sucesso" }';
+            }else{
+                echo '{ "resposta" : "Erro ao conectar com o banco de dados" }';
+            }
+        } catch (\Throwable $th) {
+            echo '{ "resposta" : "Erro ao conectar com o banco de dados_" }';
+        }
+
+    }
+
 ?>

@@ -28,6 +28,7 @@ function buscarProdutos(){
             conteudo += "       <th>Nome</th>" ;
             conteudo += "       <th>Preço</th>" ;
             conteudo += "       <th>Quantidade</th>" ;
+            conteudo += "       <th>Excluir</th>" ;
             conteudo += "  </tr> " ;
             objJSON = JSON.parse( this.responseText );
             if( objJSON.resposta ){
@@ -40,6 +41,7 @@ function buscarProdutos(){
                     conteudo += "   <td>" + prod.nome + " </td> ";
                     conteudo += "   <td>" + prod.preco + " </td> ";
                     conteudo += "   <td>" + prod.quantidade + " </td> ";
+                    conteudo += "   <td> <button onclick='excluirProduto("+ prod.id + ")'>Excluir</button> </td> ";
                     conteudo += " </tr> ";
                 });
                 conteudo += "</table>";
@@ -71,4 +73,24 @@ function inserirProduto(){
     nome = document.getElementById("txtNome").value;
     preco = document.getElementById("txtPreco").value;
     xhttp.send( "nome=" + nome + "&preco=" + preco );
+}
+
+
+
+function excluirProduto(idProduto){
+    xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function(){
+        if( this.readyState == 4 && this.status == 200){
+            objJSON = JSON.parse( this.responseText );
+            if( objJSON.resposta ){
+                alert( objJSON.resposta );
+                buscarProdutos();
+            }
+        }
+    };
+    xhttp.open("POST", "servidor.php?excluir", true);
+    xhttp.setRequestHeader("Content-type" ,"application/x-www-form-urlencoded");
+    
+    xhttp.send( "id=" + idProduto );
 }
