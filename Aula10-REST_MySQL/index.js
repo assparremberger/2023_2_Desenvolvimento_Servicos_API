@@ -46,7 +46,7 @@ servidor.get( '/produtos' , (req, res, next) => {
 
 servidor.get( '/produtos/:idProd' , (req, res, next) => {
     const idProduto = req.params.idProd;
-    knex('produto')
+    knex('produtos')
         .where( 'id' , idProduto)
         .first()
         .then( (dados) =>{
